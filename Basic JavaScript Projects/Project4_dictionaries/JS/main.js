@@ -1,3 +1,4 @@
+//
 function my_Dictionary() {
     var Guitar = {
         Make: "Gibson",
@@ -7,7 +8,7 @@ function my_Dictionary() {
     };
     document.getElementById("Dictionary").innerHTML = Guitar.Model;
 }
-
+//
 function my_KVPs() {
     var Classes = {
         ALG: "ALGEBRA 1",
@@ -17,4 +18,15 @@ function my_KVPs() {
         PSY: "PSYCHOLOGY"
     };
     document.getElementById("Classes").innerHTML = Classes.ALG;
+}
+//
+function my_Dictionary() {
+    var Guitar = {
+        Make: "Gibson",
+        Model: "Les Paul",
+        Type: "Black Beauty",
+        Artist: "Jimmy Page",
+    };
+    delete Guitar.Model;
+    document.getElementById("Dictionary").innerHTML = Guitar.Model;
 }

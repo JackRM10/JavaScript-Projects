@@ -14,9 +14,9 @@ function multiplication_Function() {
     document.getElementById("Math-three") .innerHTML = "2 + 2 = " + multiplication;
 }
 //Function to divide two numbers to return a result
-function divion_Function() {
+function division_Function() {
     var division = 48 / 6;
-    document.getElementById("Math-four") .innerHTML = "48 / 6 = " + divison;
+    document.getElementById("Math-four") .innerHTML = "48 / 6 = " + division;
 }
 //Function to perform several calculations to return a result
 function more_Math() {
@@ -44,7 +44,7 @@ Y--;
 document.write(Y);
 
 //Random function displayed in a window
-window.alert(Math.randon() * 100);
+window.alert(Math.random() * 100);
 
 //Math Obeject
 function getNapier() {
