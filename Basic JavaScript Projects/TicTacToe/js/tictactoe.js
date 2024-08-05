@@ -131,7 +131,7 @@ function placeXOrO(squareNumber) {
                 audio.play();
             }
             //This function utilizes HTML canvas to draw win lines.
-            function drawWinLine(coordX1, coordV1, coordX2, coordV2) {
+            function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
                 //This line accesses our HTML canvas element.
                 const canvas = document.getElementById("win-lines");
                 //This line gives us access to methods and properties to use on canvas.
