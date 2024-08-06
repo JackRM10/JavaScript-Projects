@@ -162,7 +162,7 @@ function placeXOrO(squareNumber) {
             //This variable creates a loop.
             const animationLoop = requestAnimationFrame(animateLineDrawing);
             //This mehotd clear content from the loop iteration.
-            c.clearReact(0, 0, 608, 608);
+            c.clearRect(0, 0, 608, 608);
             //This method starts a new path.
             c.beginPath();
             //This method moves us to a starting point in our line.
