@@ -105,7 +105,7 @@ function placeXOrO(squareNumber) {
             //9 squares are selected the code executes.
             else if (selectedSquares.length >= 9) {
             //This function plays the tie game sound.
-            audio(".media/tie.mp3");
+            audio("./media/tie.mp3");
             //This function sets a .3 second timer before the resetGame is called.
             setTimeout(function () { resetGame(); }, 500);
         }
@@ -205,7 +205,7 @@ function placeXOrO(squareNumber) {
                 //This line disallows clicking while the win sound is playing
                 disableClick();
                 //this line plays the win sounds.
-                audio(".media/winGame.mp3");
+                audio("./media/winGame.mp3");
                 //This line calls our main animation loop.
                 animateLineDrawing();
                 //This line waits 1 second. Then, clears canvas, resets game, an allows clicking again.
