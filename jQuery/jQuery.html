@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquary.min.js"></script>
+    </head>
+    <script>
+        //Get html files
+        $(document).ready (function() {
+            $("html").append(
+                "<body>\
+                    <div id="container">\
+                        <div id="inner">\
+                            <h1>Basic jQuery</h1>\
+                            <p id="1">Paragraph 1</p>\
+                            <p id="2">Paragraph 2</p>\
+                            <p id="3">Paragraph 3</p>\
+                            </div>\
+                        </div>\
+                    </body>"
+            );
+            //Assign color to paragraph 2
+            $("#2").css({"color":"red"});
+            //Setup a function to hid "Basic jQuery" text when clicking paragraph 3
+            $("#3").click (function() {
+                $("h1").hide();
+            });
+        });
+
+        //Setting up an event to run only once. 
+        // Switching handlers using the `.one()` method
+        $( "p" ).one( "click", firstClick );
+ 
+        function firstClick() {
+        console.log( "You just clicked this for the first time!" );
+ 
+        // Now set up the new handler for subsequent clicks;
+        // omit this step if no further click responses are needed
+        $( this ).click( function() { console.log( "You have clicked this before!" ); } );
+        }
+
+    </script>
+
+
+
+</html>
