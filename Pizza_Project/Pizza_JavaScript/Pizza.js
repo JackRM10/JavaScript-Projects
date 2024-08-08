@@ -11,6 +11,7 @@ function getReceipt() {
 			text1 = text1+selectedSize+"<br>";
 		}
 	}
+	// This allows for the size of the pizza to be selected, and cost to be added to running total
 	if (selectedSize === "Personal Pizza") {
 		sizeTotal = 6;
 	} else if (selectedSize === "Small Pizza") {
@@ -28,7 +29,7 @@ function getReceipt() {
 	console.log("subtotal: $"+runningTotal+".00");
 	getTopping(runningTotal,text1); // All three of these variables will be passed on to each function
 };
-
+// This creates values for toppings which can be added to the running total once selected
 function getTopping(runningTotal,text1) {
 	var toppingTotal = 0;
 	var selectedTopping = [];
@@ -48,9 +49,9 @@ function getTopping(runningTotal,text1) {
 	}
 	runningTotal = (runningTotal + toppingTotal);
 	console.log("total selected topping items: "+toppingCount);
-	console.log(toppingCount+" topping - 1 free topping = "+"$"+toppingTotal+".00");
+	console.log(toppingCount+" topping - 1 free topping = "+"$"+toppingTotal+".00"); //Deducts a topping from running total
 	console.log("topping text1: "+text1);
 	console.log("Purchase Total: "+"$"+runningTotal+".00");
 	document.getElementById("showText").innerHTML=text1;
-	document.getElementById("totalPrice").innerHTML = "</h3>Total: <strong>$"+runningTotal+".00"+"</strong></h3>";
+	document.getElementById("totalPrice").innerHTML = "</h3>Total: <strong>$"+runningTotal+".00"+"</strong></h3>";//Return runnng total
 };	
